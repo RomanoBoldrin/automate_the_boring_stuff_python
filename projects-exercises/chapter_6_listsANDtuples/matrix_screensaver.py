@@ -10,7 +10,7 @@ try:
     while True:
         # Loop over each column:
         for i in range(WIDTH):
-            if random.random() < 0.02:
+            if random.random() < 0.1:
                 # Restart a stream counter on this column.
                 # The stream length is between 4 and 14 characters long.
                 columns[i] = random.randint(4, 14)
@@ -25,6 +25,6 @@ try:
                 columns[i] -= 1  # Decrement the counter for this column.
         print()  # Print a newline at the end of the row of columns.
         time.sleep(0.1)  # Each row pauses for one tenth of a second.
-        
+
 except KeyboardInterrupt:
     sys.exit()  # When Ctrl-C is pressed, end the program.
